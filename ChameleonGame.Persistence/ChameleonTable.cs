@@ -13,7 +13,7 @@ namespace ChameleonGame.Persistence
 
         public ChameleonTable(int size)
         {
-            CurrentCameleon = 1;
+            CurrentChameleon = 1;
             if (size % 2 == 0)
                 throw new ArgumentException("Invalid size!", "size");
             else
@@ -81,7 +81,7 @@ namespace ChameleonGame.Persistence
 
         public ChameleonTable()
         {
-            CurrentCameleon = 1;
+            CurrentChameleon = 1;
             _size = 3;
             _cameleonTable = new int[_size, _size];
             _colorTable = new int[_size, _size];
@@ -144,7 +144,7 @@ namespace ChameleonGame.Persistence
 
         public int Size { get => _size; }
 
-        public int CurrentCameleon { get; set; }
+        public int CurrentChameleon { get; set; }
 
         public int this[int x, int y]
         {
@@ -244,7 +244,7 @@ namespace ChameleonGame.Persistence
             return false;
         }
 
-        public int WinnerCameleon()
+        public int WinnerChameleon()
         {
             int numOfRC = 0;
             int numOfGC = 0;

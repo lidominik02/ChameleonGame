@@ -18,9 +18,9 @@ namespace ChameleonGame.Persistence
                     String line = await reader.ReadLineAsync();
                     Int32 tableSize = Int32.Parse(line);
                     line = await reader.ReadLineAsync();
-                    Int32 currentCameleon = Int32.Parse(line);
+                    Int32 CurrentChameleon = Int32.Parse(line);
                     ChameleonTable table = new ChameleonTable(tableSize);
-                    table.CurrentCameleon = currentCameleon;
+                    table.CurrentChameleon = CurrentChameleon;
                     for (Int32 i = 0; i < tableSize; i++)
                     {
                         Debug.WriteLine(i);
@@ -49,7 +49,7 @@ namespace ChameleonGame.Persistence
                 using (StreamWriter writer = new StreamWriter(path)) 
                 {
                     writer.WriteLine(table.Size);
-                    writer.WriteLine(table.CurrentCameleon);
+                    writer.WriteLine(table.CurrentChameleon);
                     for (Int32 i = 0; i < table.Size; i++)
                     {
                         for (Int32 j = 0; j < table.Size; j++)

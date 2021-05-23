@@ -34,9 +34,9 @@ namespace ChameleonGame
             _loadMenuItem.Click += LoadMenuItem_Click;
         }
 
-        private void OnGameOver(object sender, CameleonEventArgs e)
+        private void OnGameOver(object sender, ChameleonEventArgs e)
         {
-            string winner = (e.WinnerCameleon == 1) ? "Piros Kaméleon" : "Zöld Kaméleon";
+            string winner = (e.WinnerChameleon == 1) ? "Piros Kaméleon" : "Zöld Kaméleon";
             MessageBox.Show("A játéknak vége!\nA győztes: "+winner);
             
             int size = _model.Size;
@@ -66,7 +66,7 @@ namespace ChameleonGame
                     _model.NewGame(3);
                 }
                 GenerateTable();
-                _statusLabel.Text = _model.CurrentCameleon + " következik.";
+                _statusLabel.Text = _model.CurrentChameleon + " következik.";
             }
         }
 
@@ -91,28 +91,28 @@ namespace ChameleonGame
         {
             _model.NewGame(7);
             GenerateTable();
-            _statusLabel.Text = _model.CurrentCameleon + " következik.";
+            _statusLabel.Text = _model.CurrentChameleon + " következik.";
         }
 
         private void FiveByFiveNewGame_Click(object sender, EventArgs e)
         {
             _model.NewGame(5);
             GenerateTable();
-            _statusLabel.Text = _model.CurrentCameleon + " következik.";
+            _statusLabel.Text = _model.CurrentChameleon + " következik.";
         }
 
         private void ThreeByThreeNewGame_Click(object sender, EventArgs e)
         {
             _model.NewGame(3);
             GenerateTable();
-            _statusLabel.Text = _model.CurrentCameleon + " következik.";
+            _statusLabel.Text = _model.CurrentChameleon + " következik.";
         }
 
         private void CameleonForm_Load(object sender, EventArgs e)
         {
             _model.NewGame(5);
             GenerateTable();
-            _statusLabel.Text = _model.CurrentCameleon+" következik.";
+            _statusLabel.Text = _model.CurrentChameleon+" következik.";
         }
 
         private void OnRefreshTable(object sender, EventArgs e)
@@ -226,7 +226,7 @@ namespace ChameleonGame
                 MessageBox.Show("Érvénytelen lépés!");
             }
             _prevButton = null;
-            _statusLabel.Text = _model.CurrentCameleon + " következik.";
+            _statusLabel.Text = _model.CurrentChameleon + " következik.";
         }
     }
 }
